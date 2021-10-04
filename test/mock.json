@@ -1,0 +1,13 @@
+{
+    "createUser": {
+        "email": "sushil@gmail.com",
+        "country": "india",
+        "name": "sushil kumar singh",
+        "company": "java R&D",
+        "location": "uttar pradesh"
+    },
+    "getUser": {
+        "email": "sushil@gmail.com",
+        "country": "india"
+    }
+}

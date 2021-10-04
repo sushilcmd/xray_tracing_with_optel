@@ -1,0 +1,45 @@
+version=0.1
+
+[dev.deploy.parameters]
+stack_name = "dev-xray-poc"
+template_file = "samTemplates/xray-poc.yaml"
+s3_bucket = "xray-lambda-poc"
+s3_prefix = "xray-poc-dev"
+region = "eu-west-1"
+no_confirm_changeset = true
+capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM"
+parameter_overrides = "paramEnvironment=\"dev\""
+profile = "aws_profile_name"
+
+[test.deploy.parameters]
+stack_name = "test-xray-poc"
+template_file = "samTemplates/xray-poc.yaml"
+s3_bucket = "xray-lambda-poc"
+s3_prefix = "xray-poc-test"
+region = "eu-west-1"
+no_confirm_changeset = true
+capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM"
+parameter_overrides = "paramEnvironment=\"test\""
+profile = "aws_profile_name"
+
+[uat.deploy.parameters]
+stack_name = "uat-xray-poc"
+template_file = "samTemplates/xray-poc.yaml"
+s3_bucket = "xray-lambda-poc"
+s3_prefix = "xray-poc-uat"
+region = "eu-west-1"
+no_confirm_changeset = true
+capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM"
+parameter_overrides = "paramEnvironment=\"uat\""
+profile = "aws_profile_name"
+
+[stage.deploy.parameters]
+stack_name = "stage-xray-poc"
+template_file = "samTemplates/xray-poc.yaml"
+s3_bucket = "xray-lambda-poc"
+s3_prefix = "xray-poc-stage"
+region = "eu-west-1"
+no_confirm_changeset = true
+capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM"
+parameter_overrides = "paramEnvironment=\"stage\""
+profile = "aws_profile_name"
